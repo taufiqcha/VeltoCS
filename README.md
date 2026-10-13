@@ -1,6 +1,6 @@
 # VeltoCS
 
-Code for *VeltoCS: Voltammetric electronic tongue for semi-quantitative cadmium screening based on ICP-OES analysis*.
+Code for *Low-cost voltammetric electronic tongue for semi-quantitative cadmium screening using ICP-OES reference labels*.
 
 Cyclic voltammograms of Cd²⁺ recorded on a low-cost (LecSens) and a commercial (EmStat4) potentiostat are labelled with ICP-OES concentrations, classified into four decade-wide screening bands, and compared with ICP-OES by Passing–Bablok regression, Bland–Altman analysis, paired tests, recovery, weighted kappa, and false negative and false positive rates at each threshold. `results/` holds the computed results behind every number in the paper. Identifiers in the code are in Indonesian.
 
