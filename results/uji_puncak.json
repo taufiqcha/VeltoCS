@@ -1,0 +1,167 @@
+{
+ "LC": {
+  "maju": {
+   "puncak": {
+    "bentuk": "lembah",
+    "per_level": [
+     {
+      "level": 8.0,
+      "potensial_volt": -0.78,
+      "prominensi": 9.336965663471176
+     },
+     {
+      "level": 60.0,
+      "potensial_volt": -0.81,
+      "prominensi": 13.464096380758479
+     },
+     {
+      "level": 1000.0,
+      "potensial_volt": -0.85,
+      "prominensi": 84.91872522453637
+     }
+    ],
+    "jumlah_level_berpuncak": 3,
+    "jumlah_level": 14,
+    "median_volt": -0.81,
+    "rentang_volt": [
+     -0.85,
+     -0.78
+    ],
+    "spearman_tinggi_lawan_kadar_icp": 0.4681318681318682
+   },
+   "korelasi_terkuat": {
+    "potensial_volt": -0.97,
+    "spearman": -0.8082606982571829
+   }
+  },
+  "balik": {
+   "puncak": {
+    "bentuk": "bukit",
+    "per_level": [
+     {
+      "level": 8.0,
+      "potensial_volt": -0.69,
+      "prominensi": 14.551225160371203
+     },
+     {
+      "level": 10.0,
+      "potensial_volt": -0.71,
+      "prominensi": 4.995756840675362
+     },
+     {
+      "level": 60.0,
+      "potensial_volt": -0.7,
+      "prominensi": 8.988193155424241
+     }
+    ],
+    "jumlah_level_berpuncak": 3,
+    "jumlah_level": 14,
+    "median_volt": -0.7,
+    "rentang_volt": [
+     -0.71,
+     -0.69
+    ],
+    "spearman_tinggi_lawan_kadar_icp": 0.1032967032967033
+   },
+   "korelasi_terkuat": {
+    "potensial_volt": -1.05,
+    "spearman": -0.5525565640587771
+   }
+  }
+ },
+ "EM": {
+  "maju": {
+   "puncak": {
+    "bentuk": "lembah",
+    "per_level": [
+     {
+      "level": 6.0,
+      "potensial_volt": -0.87,
+      "prominensi": 5.531210578311121
+     },
+     {
+      "level": 8.0,
+      "potensial_volt": -0.87,
+      "prominensi": 8.381538120210482
+     },
+     {
+      "level": 10.0,
+      "potensial_volt": -0.87,
+      "prominensi": 15.587525876687891
+     },
+     {
+      "level": 20.0,
+      "potensial_volt": -0.87,
+      "prominensi": 25.537782545090508
+     },
+     {
+      "level": 60.0,
+      "potensial_volt": -0.83,
+      "prominensi": 3.9163749387149878
+     },
+     {
+      "level": 1000.0,
+      "potensial_volt": -0.88,
+      "prominensi": 5.722353020849045
+     }
+    ],
+    "jumlah_level_berpuncak": 6,
+    "jumlah_level": 14,
+    "median_volt": -0.87,
+    "rentang_volt": [
+     -0.88,
+     -0.83
+    ],
+    "spearman_tinggi_lawan_kadar_icp": 0.11208791208791209
+   },
+   "korelasi_terkuat": {
+    "potensial_volt": -1.36,
+    "spearman": -0.867039778848928
+   }
+  },
+  "balik": {
+   "puncak": {
+    "bentuk": "bukit",
+    "per_level": [
+     {
+      "level": 8.0,
+      "potensial_volt": -0.69,
+      "prominensi": 15.184752085175784
+     },
+     {
+      "level": 10.0,
+      "potensial_volt": -0.66,
+      "prominensi": 3.839368554292019
+     },
+     {
+      "level": 20.0,
+      "potensial_volt": -0.68,
+      "prominensi": 9.345356846614841
+     },
+     {
+      "level": 60.0,
+      "potensial_volt": -0.69,
+      "prominensi": 4.997928690718727
+     },
+     {
+      "level": 400.0,
+      "potensial_volt": -0.64,
+      "prominensi": 4.239080260993184
+     }
+    ],
+    "jumlah_level_berpuncak": 5,
+    "jumlah_level": 14,
+    "median_volt": -0.68,
+    "rentang_volt": [
+     -0.69,
+     -0.64
+    ],
+    "spearman_tinggi_lawan_kadar_icp": 0.3010989010989011
+   },
+   "korelasi_terkuat": {
+    "potensial_volt": -1.36,
+    "spearman": -0.8631052810427389
+   }
+  }
+ }
+}

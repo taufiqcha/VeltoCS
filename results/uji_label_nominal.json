@@ -1,0 +1,190 @@
+{
+ "LC": {
+  "icp": {
+   "recovery_median_persen": 100.44624572200229,
+   "recovery_rentang_persen": [
+    92.63102828185977,
+    151.9105667826616
+   ],
+   "t_berpasangan_p": 0.14629147354020514,
+   "wilcoxon_p": 0.42626953125,
+   "passing_bablok": {
+    "kemiringan": 0.9998453337588037,
+    "kemiringan_ci": [
+     0.9995039442588723,
+     0.9999761738253385
+    ],
+    "intersep": 0.010156932060652935,
+    "intersep_ci": [
+     0.0015646648913048011,
+     0.03257598052114474
+    ],
+    "jumlah_pasangan": 227500
+   },
+   "bland_altman": {
+    "bias_persen": 0.531105553146407,
+    "simpangan_baku_persen": 15.875691492978524,
+    "batas_kesesuaian_persen": [
+     -30.585249773091498,
+     31.64746087938431
+    ],
+    "porsi_di_dalam_batas": 0.96
+   },
+   "kappa_kuadratik": 0.998067360791673,
+   "per_ambang": {
+    "10": {
+     "negatif_palsu": 0.0018181818181818182,
+     "positif_palsu": 0.006666666666666666
+    },
+    "100": {
+     "negatif_palsu": 0.0,
+     "positif_palsu": 0.0
+    },
+    "1000": {
+     "negatif_palsu": 0.0,
+     "positif_palsu": 0.0
+    }
+   }
+  },
+  "nominal": {
+   "recovery_median_persen": 105.18610891814754,
+   "recovery_rentang_persen": [
+    63.38621879556309,
+    133.7448296307385
+   ],
+   "t_berpasangan_p": 0.49944285443620506,
+   "wilcoxon_p": 0.2412109375,
+   "passing_bablok": {
+    "kemiringan": 1.0502137928100277,
+    "kemiringan_ci": [
+     1.047140816087715,
+     1.0577651581483902
+    ],
+    "intersep": -0.48900668895976596,
+    "intersep_ci": [
+     -0.5330841332791216,
+     -0.4633260735775391
+    ],
+    "jumlah_pasangan": 227500
+   },
+   "bland_altman": {
+    "bias_persen": -1.487583616360957,
+    "simpangan_baku_persen": 22.582136193872625,
+    "batas_kesesuaian_persen": [
+     -45.748570556351304,
+     42.77340332362939
+    ],
+    "porsi_di_dalam_batas": 0.9671428571428572
+   },
+   "kappa_kuadratik": 0.9479732055539115,
+   "per_ambang": {
+    "10": {
+     "negatif_palsu": 0.003272727272727272,
+     "positif_palsu": 0.006666666666666666
+    },
+    "100": {
+     "negatif_palsu": 0.004,
+     "positif_palsu": 0.11111111111111112
+    },
+    "1000": {
+     "negatif_palsu": 0.0,
+     "positif_palsu": 0.0
+    }
+   }
+  }
+ },
+ "EM": {
+  "icp": {
+   "recovery_median_persen": 101.42384956016608,
+   "recovery_rentang_persen": [
+    81.31893431463543,
+    160.63774506209248
+   ],
+   "t_berpasangan_p": 0.38801642883682996,
+   "wilcoxon_p": 0.42626953125,
+   "passing_bablok": {
+    "kemiringan": 0.9995792996438975,
+    "kemiringan_ci": [
+     0.9989055559456559,
+     0.9999299463669792
+    ],
+    "intersep": 0.0295878560440741,
+    "intersep_ci": [
+     0.004926872009747285,
+     0.07697225034141297
+    ],
+    "jumlah_pasangan": 225552
+   },
+   "bland_altman": {
+    "bias_persen": 0.1403223806540711,
+    "simpangan_baku_persen": 20.440174313719673,
+    "batas_kesesuaian_persen": [
+     -39.92241927423649,
+     40.20306403554463
+    ],
+    "porsi_di_dalam_batas": 0.9540889526542324
+   },
+   "kappa_kuadratik": 0.9889743902109585,
+   "per_ambang": {
+    "10": {
+     "negatif_palsu": 0.006581352833638027,
+     "positif_palsu": 0.004
+    },
+    "100": {
+     "negatif_palsu": 0.007200000000000001,
+     "positif_palsu": 0.003131991051454138
+    },
+    "1000": {
+     "negatif_palsu": 0.04,
+     "positif_palsu": 0.0
+    }
+   }
+  },
+  "nominal": {
+   "recovery_median_persen": 105.05655547901912,
+   "recovery_rentang_persen": [
+    54.4817879900592,
+    148.78150156166595
+   ],
+   "t_berpasangan_p": 0.5067151381314856,
+   "wilcoxon_p": 0.216552734375,
+   "passing_bablok": {
+    "kemiringan": 1.0537649049647195,
+    "kemiringan_ci": [
+     1.0487272344641927,
+     1.0658592913112843
+    ],
+    "intersep": -0.4974228247663852,
+    "intersep_ci": [
+     -0.5260865204077438,
+     -0.48548354568013696
+    ],
+    "jumlah_pasangan": 225552
+   },
+   "bland_altman": {
+    "bias_persen": -1.6123991966841622,
+    "simpangan_baku_persen": 26.67425006076435,
+    "batas_kesesuaian_persen": [
+     -53.89392931578229,
+     50.66913092241397
+    ],
+    "porsi_di_dalam_batas": 0.945480631276901
+   },
+   "kappa_kuadratik": 0.9465746397696175,
+   "per_ambang": {
+    "10": {
+     "negatif_palsu": 0.006581352833638027,
+     "positif_palsu": 0.004
+    },
+    "100": {
+     "negatif_palsu": 0.0,
+     "positif_palsu": 0.11230425055928413
+    },
+    "1000": {
+     "negatif_palsu": 0.04,
+     "positif_palsu": 0.0
+    }
+   }
+  }
+ }
+}

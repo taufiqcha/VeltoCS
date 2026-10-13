@@ -1,0 +1,240 @@
+{
+ "LC": {
+  "model": "ET",
+  "benih": 0,
+  "passing_bablok": {
+   "kemiringan": 0.9998453337588037,
+   "kemiringan_ci": [
+    0.9995039442588723,
+    0.9999761738253385
+   ],
+   "intersep": 0.010156932060652935,
+   "intersep_ci": [
+    0.0015646648913048011,
+    0.03257598052114474
+   ],
+   "jumlah_pasangan": 227500
+  },
+  "bland_altman": {
+   "bias_persen": 0.5311055531464072,
+   "simpangan_baku_persen": 15.875691492978525,
+   "batas_kesesuaian_persen": [
+    -30.5852497730915,
+    31.647460879384315
+   ],
+   "porsi_di_dalam_batas": 0.96
+  },
+  "semi_kuantifikasi": {
+   "model": "SVM",
+   "kappa_kuadratik": [
+    0.998067360791673,
+    0.001062058615700847
+   ],
+   "kappa_linear": [
+    0.9969214496439814,
+    0.001689751972097988
+   ],
+   "porsi_salah_ke_pita_tetangga": [
+    1.0,
+    0.0
+   ],
+   "jumlah_salah_lebih_satu_pita": [
+    0.0,
+    0.0
+   ],
+   "per_pita": {
+    "rendah": {
+     "sensitivitas": [
+      0.9933333333333334,
+      0.007302967433402221
+     ],
+     "spesifisitas": [
+      0.9981818181818183,
+      1.1102230246251565e-16
+     ]
+    },
+    "sedang": {
+     "sensitivitas": [
+      0.9966666666666667,
+      0.0
+     ],
+     "spesifisitas": [
+      0.9975000000000002,
+      0.002738612787525813
+     ]
+    },
+    "tinggi": {
+     "sensitivitas": [
+      1.0,
+      0.0
+     ],
+     "spesifisitas": [
+      1.0,
+      0.0
+     ]
+    },
+    "sangat tinggi": {
+     "sensitivitas": [
+      1.0,
+      0.0
+     ],
+     "spesifisitas": [
+      1.0,
+      0.0
+     ]
+    }
+   },
+   "per_ambang": {
+    "10": {
+     "negatif_palsu": [
+      0.0018181818181818182,
+      0.0
+     ],
+     "positif_palsu": [
+      0.006666666666666666,
+      0.007302967433402215
+     ]
+    },
+    "100": {
+     "negatif_palsu": [
+      0.0,
+      0.0
+     ],
+     "positif_palsu": [
+      0.0,
+      0.0
+     ]
+    },
+    "1000": {
+     "negatif_palsu": [
+      0.0,
+      0.0
+     ],
+     "positif_palsu": [
+      0.0,
+      0.0
+     ]
+    }
+   }
+  }
+ },
+ "EM": {
+  "model": "ET",
+  "benih": 0,
+  "passing_bablok": {
+   "kemiringan": 0.9995792996438975,
+   "kemiringan_ci": [
+    0.9989055559456559,
+    0.9999299463669792
+   ],
+   "intersep": 0.0295878560440741,
+   "intersep_ci": [
+    0.004926872009747285,
+    0.07697225034141297
+   ],
+   "jumlah_pasangan": 225552
+  },
+  "bland_altman": {
+   "bias_persen": 0.14032238065406977,
+   "simpangan_baku_persen": 20.440174313719677,
+   "batas_kesesuaian_persen": [
+    -39.922419274236496,
+    40.203064035544635
+   ],
+   "porsi_di_dalam_batas": 0.9540889526542324
+  },
+  "semi_kuantifikasi": {
+   "model": "SVM",
+   "kappa_kuadratik": [
+    0.9889743902109585,
+    0.0029231297383006637
+   ],
+   "kappa_linear": [
+    0.985508712580074,
+    0.0031910719170818373
+   ],
+   "porsi_salah_ke_pita_tetangga": [
+    0.8666666666666666,
+    0.13540064007726602
+   ],
+   "jumlah_salah_lebih_satu_pita": [
+    1.0,
+    0.8944271909999159
+   ],
+   "per_pita": {
+    "rendah": {
+     "sensitivitas": [
+      0.9960000000000001,
+      0.005333333333333329
+     ],
+     "spesifisitas": [
+      0.9934186471663621,
+      0.0008956086810907728
+     ]
+    },
+    "sedang": {
+     "sensitivitas": [
+      0.983164983164983,
+      0.002129479905837283
+     ],
+     "spesifisitas": [
+      0.994,
+      0.0051478150704935095
+     ]
+    },
+    "tinggi": {
+     "sensitivitas": [
+      0.9960000000000001,
+      0.0058309518948453055
+     ],
+     "spesifisitas": [
+      0.9951710261569415,
+      0.0027293078402918763
+     ]
+    },
+    "sangat tinggi": {
+     "sensitivitas": [
+      0.96,
+      0.0
+     ],
+     "spesifisitas": [
+      1.0,
+      0.0
+     ]
+    }
+   },
+   "per_ambang": {
+    "10": {
+     "negatif_palsu": [
+      0.006581352833638027,
+      0.0008956086810907417
+     ],
+     "positif_palsu": [
+      0.004,
+      0.005333333333333334
+     ]
+    },
+    "100": {
+     "negatif_palsu": [
+      0.007200000000000001,
+      0.005306599664568639
+     ],
+     "positif_palsu": [
+      0.003131991051454138,
+      0.0010959685650036592
+     ]
+    },
+    "1000": {
+     "negatif_palsu": [
+      0.04,
+      0.0
+     ],
+     "positif_palsu": [
+      0.0,
+      0.0
+     ]
+    }
+   }
+  }
+ }
+}
