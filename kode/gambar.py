@@ -105,7 +105,7 @@ def gambar_kesesuaian(data, semua_prediksi, bahasa):
         ax = panel[baris, 0]
         ax.scatter(kadar, prediksi, s=9, color=BIRU, alpha=0.6, linewidths=0, zorder=2)
         garis = np.array([kadar.min() * 0.8, kadar.max() * 1.2])
-        ax.plot(garis, pb["intersep"] + pb["kemiringan"] * garis, color=MERAH, lw=1.6, label="Passing–Bablok", zorder=3)
+        ax.plot(garis, pb["intersep"] + pb["kemiringan"] * garis, color=ORANYE, lw=1.6, label="Passing–Bablok", zorder=3)
         ax.plot(garis, garis, color="black", ls="--", lw=0.9, label=T["identitas"], zorder=4)
         ax.set_xscale("log")
         ax.set_yscale("log")
@@ -117,10 +117,10 @@ def gambar_kesesuaian(data, semua_prediksi, bahasa):
         rerata = (prediksi + kadar) / 2
         selisih = 100 * (prediksi - kadar) / rerata
         ax.scatter(rerata, selisih, s=9, color=BIRU, alpha=0.6, linewidths=0, zorder=2)
-        ax.axhline(ba["bias_persen"], color=MERAH, lw=1.6, label="bias", zorder=3)
+        ax.axhline(ba["bias_persen"], color=ORANYE, lw=1.6, label="bias", zorder=3)
         for batas in ba["batas_kesesuaian_persen"]:
-            ax.axhline(batas, color=MERAH, lw=1.2, ls="--", zorder=3)
-        ax.plot([], [], color=MERAH, lw=1.2, ls="--", label=T["loa"])
+            ax.axhline(batas, color=ORANYE, lw=1.2, ls="--", zorder=3)
+        ax.plot([], [], color=ORANYE, lw=1.2, ls="--", label=T["loa"])
         ax.set_xscale("log")
         ax.set_xlabel(T["rerata"])
         ax.set_ylabel(T["selisih"])

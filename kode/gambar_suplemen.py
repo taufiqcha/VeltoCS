@@ -4,34 +4,42 @@ import matplotlib
 import numpy as np
 
 from data import ALAT, HASIL, SCAN, sumbu_potensial
-from gambar import (ABU, BIRU, FOLDER, HALAMAN, MERAH, NAMA_ALAT, NAMA_SCAN, ORANYE, ORANYE_ISI, TEKS, desimal,
+from gambar import (ABU, BIRU, FOLDER, HALAMAN, NAMA_ALAT, NAMA_SCAN, ORANYE, ORANYE_ISI, TEKS, desimal,
                     gambar_matriks, plt, simpan)
 from uji_puncak import NAMA_CABANG
 
 TEKS_SUPLEMEN = {
     "id": {"scan": "scan ke-", "arus": "arus (satuan alat)", "potensial": "potensial (V terhadap Ag/AgCl)",
-           "selisih": "selisih relatif terhadap\nmedian scan 3–10 (%)", "dibuang": "scan 1–2 (dibuang)", "dipakai": "scan 3–10",
-           "rho": "korelasi Spearman ρ", "shap": "porsi SHAP (%)", "terkuat": "korelasi terkuat", "contoh": "pengukuran contoh {} mg/L"},
+           "selisih": "selisih terhadap median\nscan 3–10 (%)", "dibuang": "scan 1–2 (dibuang)", "dipakai": "scan 3–10",
+           "rho": "korelasi Spearman ρ", "potensial_pendek": "potensial (V)", "scan_pendek": "scan ke-", "arus_pendek": "arus", "shap": "porsi SHAP (%)", "terkuat": "korelasi terkuat", "contoh": "pengukuran contoh {} mg/L"},
     "en": {"scan": "scan number", "arus": "current (instrument units)", "potensial": "potential (V vs Ag/AgCl)",
-           "selisih": "relative difference from\nmedian of scans 3–10 (%)", "dibuang": "scans 1–2 (discarded)", "dipakai": "scans 3–10",
-           "rho": "Spearman ρ", "shap": "SHAP share (%)", "terkuat": "strongest correlation", "contoh": "example measurement at {} mg/L"},
+           "selisih": "difference from median\nof scans 3–10 (%)", "dibuang": "scans 1–2 (discarded)", "dipakai": "scans 3–10",
+           "rho": "Spearman ρ", "potensial_pendek": "potential (V)", "scan_pendek": "scan", "arus_pendek": "current", "shap": "SHAP share (%)", "terkuat": "strongest correlation", "contoh": "example measurement at {} mg/L"},
 }
 
 
 def gambar_scan(hasil, bahasa):
     T = TEKS_SUPLEMEN[bahasa]
-    kanvas, panel = plt.subplots(1, 3, figsize=(HALAMAN, HALAMAN * 0.36))
-    for ax, alat in zip(panel, ALAT):
+    kanvas = plt.figure(figsize=(HALAMAN, HALAMAN * 0.42))
+    kisi = kanvas.add_gridspec(1, 3, width_ratios=[1.2, 1.2, 1], wspace=0.7, left=0.0, right=0.98, bottom=0.2, top=0.92)
+    biru = matplotlib.colormaps["Blues"](np.linspace(0.45, 1, 8))
+    for k, alat in enumerate(ALAT):
         arsip = np.load(SCAN / f"scans_{alat}.npz")
         n = hasil[alat]["scan"]["contoh"]
-        biru = matplotlib.colormaps["Blues"](np.linspace(0.45, 1, 8))
+        ax = kanvas.add_subplot(kisi[k], projection="3d")
         for s in range(arsip["V"].shape[1]):
-            warna, tebal = (ORANYE if s < 2 else biru[s - 2]), (1.1 if s < 2 else 0.7)
-            ax.plot(arsip["V"][n, s], arsip["I"][n, s], color=warna, lw=tebal, ls="--" if s == 0 else "-")
-        ax.set_title(f"({'ab'[ALAT.index(alat)]}) {NAMA_ALAT[alat]}")
-        ax.set_xlabel(T["potensial"])
-        ax.set_ylabel(T["arus"])
-    ax = panel[2]
+            ax.plot(arsip["V"][n, s], np.full(arsip["V"].shape[2], s + 1), arsip["I"][n, s],
+                    color=ORANYE if s < 2 else biru[s - 2], lw=0.9 if s < 2 else 0.7)
+        ax.set_xlabel(T["potensial_pendek"], labelpad=-4)
+        ax.set_ylabel(T["scan_pendek"], labelpad=-4)
+        ax.set_zlabel(T["arus_pendek"], labelpad=-4)
+        ax.set_yticks([1, 3, 5, 7, 10])
+        ax.tick_params(labelsize=6.5, pad=-2)
+        ax.view_init(elev=20, azim=-62)
+        for bidang in (ax.xaxis, ax.yaxis, ax.zaxis):
+            bidang.pane.fill = False
+        ax.set_title(f"({'ab'[k]}) {NAMA_ALAT[alat]}")
+    ax = kanvas.add_subplot(kisi[2])
     indeks = np.arange(1, 11)
     for alat, warna, penanda in zip(ALAT, (BIRU, ABU), ("o", "s")):
         ax.plot(indeks, hasil[alat]["scan"]["selisih_median_persen"], color=warna, marker=penanda, ms=3.5, lw=1, label=NAMA_ALAT[alat])
@@ -43,7 +51,6 @@ def gambar_scan(hasil, bahasa):
     ax.legend(frameon=False)
     garis = [plt.Line2D([], [], color=ORANYE, lw=1.1, label=T["dibuang"]), plt.Line2D([], [], color=BIRU, lw=0.9, label=T["dipakai"])]
     kanvas.legend(handles=garis, loc="lower center", ncol=2, frameon=False)
-    kanvas.tight_layout(rect=(0, 0.08, 1, 1))
     simpan(kanvas, "S1", bahasa)
 
 
@@ -68,7 +75,7 @@ def gambar_korelasi(hasil, shap, bahasa):
             ax.plot(sumbu[indeks], rho[indeks], color=BIRU, lw=1.2)
             ax.axhline(0, color=ABU, lw=0.5)
             if terkuat in indeks:
-                ax.axvline(sumbu[terkuat], color=MERAH, ls="--", lw=0.9, label=T["terkuat"])
+                ax.axvline(sumbu[terkuat], color=ABU, ls="--", lw=0.9, label=T["terkuat"])
                 ax.legend(frameon=False, loc="upper left")
             ax.set_ylim(-1, 1)
             ax.set_ylabel(T["rho"], color=BIRU)
