@@ -5,7 +5,7 @@ import zipfile
 import numpy as np
 import openpyxl
 
-from data import DATA, VOLTAMETRI
+from data import DATA, SCAN, VOLTAMETRI
 
 FOLDER = {"LC": "Alat Sensor Cadmium LC", "EM": "Alat Sensor CD Groundturth Estat"}
 LEVEL_PPM = [2, 4, 6, 8, 10, 20, 40, 60, 80, 100, 200, 400, 600, 800, 1000]
@@ -98,6 +98,7 @@ def main():
     with zipfile.ZipFile(arsip) as zf:
         for alat in ("LC", "EM"):
             V, I, y[alat], ok = baca_arsip(zf, alat)
+            np.savez_compressed(SCAN / f"scans_{alat}.npz", V=V, I=I, y=y[alat], ok=ok)
             X[alat] = np.vstack([satu_pengukuran(V[n], I[n], ok[n]) for n in range(V.shape[0])])
             print(f"{alat}: {V.shape[0]} measurements, {ok.sum()}/{ok.size} scans read", flush=True)
     (X_LC, X_EM), layak = tambal(X["LC"], X["EM"])

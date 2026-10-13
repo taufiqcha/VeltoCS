@@ -8,6 +8,7 @@ DATA = AKAR / "data"
 HASIL = AKAR / "results"
 ICP_OES = DATA / "icp_oes.csv"
 VOLTAMETRI = DATA / "sumbu_sama.npz"
+SCAN = DATA
 ALAT = ("LC", "EM")
 
 

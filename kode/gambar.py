@@ -67,7 +67,7 @@ def matriks_svm(data):
     return hasil
 
 
-def gambar_matriks(semua_matriks, bahasa):
+def gambar_matriks(semua_matriks, bahasa, nomor=3):
     T = TEKS[bahasa]
     kanvas, panel = plt.subplots(1, 2, figsize=(HALAMAN, HALAMAN * 0.42))
     peta = matplotlib.colors.LinearSegmentedColormap.from_list("biru", ["#FFFFFF", BIRU])
@@ -88,7 +88,7 @@ def gambar_matriks(semua_matriks, bahasa):
         ax.set_title(f"({'ab'[ALAT.index(alat)]}) {NAMA_ALAT[alat]}")
         ax.spines[:].set_visible(True)
     kanvas.tight_layout()
-    simpan(kanvas, 3, bahasa)
+    simpan(kanvas, nomor, bahasa)
 
 
 def prediksi_et(data):
